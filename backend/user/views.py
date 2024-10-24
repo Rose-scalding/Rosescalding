@@ -13,6 +13,7 @@ import json
 import random
 
 
+# hello_world
 def hello_world(request):
     data = {"message": "Hello, world!"}
     print(request.headers)
@@ -22,6 +23,7 @@ def hello_world(request):
         return JsonResponse(data)  # 使用 JsonResponse 返回 JSON 数据
 
 
+# 登录功能
 @api_view(['POST'])
 def login(request):
     data = json.loads(request.body)
@@ -51,6 +53,7 @@ def login(request):
         return Response({"error": "登录失败，密码不正确"}, status=400)
 
 
+# 注册功能
 @api_view(['POST'])
 def register(request):
     data = json.loads(request.body)  # 确保以 JSON 格式解析请求体

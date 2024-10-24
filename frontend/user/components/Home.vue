@@ -4,6 +4,9 @@
         <p v-if="!isLoggedIn">您还没有登录，请先登录！</p>
         <div v-else>
             <p>您已经登录，可以访问该页面。</p>
+            <div>
+                <a href="game/index.html">点击进入游戏页面</a>
+            </div>
         </div>
     </div>
 </template>
